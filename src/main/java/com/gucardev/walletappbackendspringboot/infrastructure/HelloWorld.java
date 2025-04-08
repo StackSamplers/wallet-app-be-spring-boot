@@ -1,4 +1,4 @@
-package com.gucardev.walletappbackendspringboot;
+package com.gucardev.walletappbackendspringboot.infrastructure;
 
 import com.gucardev.walletappbackendspringboot.infrastructure.response.SuccessResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +20,7 @@ public class HelloWorld {
 
     @GetMapping({"/", "/hello"})
     public ResponseEntity<?> helloWorld() {
-        return SuccessResponse.builder().data("Hello World!").buildResponseEntity();
+        return SuccessResponse.builder().data("Hello World!").build();
     }
 
     @GetMapping("/time")
@@ -32,7 +32,7 @@ public class HelloWorld {
         response.put("timezone", zoneId.getId());
         response.put("offset", zoneId.getRules().getOffset(now.toInstant()).getId());
         response.put("currentTime", now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-        return SuccessResponse.builder().data(response).buildResponseEntity();
+        return SuccessResponse.builder().data(response).build();
     }
 
 }

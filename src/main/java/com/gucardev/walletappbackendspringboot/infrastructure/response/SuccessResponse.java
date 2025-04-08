@@ -86,7 +86,7 @@ public class SuccessResponse<T> {
         }
 
 
-        public <R> ResponseEntity<R> buildResponseEntity() {
+        public <R> ResponseEntity<R> build() {
             if (message == null) {
                 message = MessageUtil.getMessage("response.success.default");
             }
