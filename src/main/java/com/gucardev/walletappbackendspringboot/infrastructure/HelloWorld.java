@@ -20,6 +20,7 @@ public class HelloWorld {
 
     @GetMapping({"/", "/hello"})
     public ResponseEntity<?> helloWorld() {
+        log.info("Hello World");
         return SuccessResponse.builder().data("Hello World!").build();
     }
 

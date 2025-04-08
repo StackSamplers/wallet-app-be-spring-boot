@@ -3,8 +3,8 @@ spring:
   # Database configuration for development environment
   datasource:
     url: jdbc:mysql://localhost:3306/mydatabase?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Istanbul  # Database connection URL
-    username: secret
-    password: verysecret
+    username: root
+    password: pass
 
   # Additional dev-specific settings
   jpa:
@@ -16,4 +16,5 @@ logging:
   level:
     com.gucardev: debug
     org.hibernate.SQL: debug
-    org.springframework.web: debug
+#    org.springframework.web: debug
+#    io.micrometer.prometheus: warn

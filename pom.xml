@@ -137,6 +137,13 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Logging - logstash -->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>8.0</version>
+        </dependency>
+
         <!-- Cloud, circuit breaker, and distributed tracing -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
