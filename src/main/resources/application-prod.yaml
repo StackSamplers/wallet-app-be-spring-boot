@@ -1,0 +1,19 @@
+spring:
+
+  # Database configuration for development environment
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydatabase?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Istanbul  # Database connection URL
+    username: secret
+    password: verysecret
+
+  # Additional dev-specific settings
+  jpa:
+    show-sql: false
+
+
+# Development-specific logging configuration
+logging:
+  level:
+    com.gucardev: info
+    org.hibernate.SQL: info
+    org.springframework.web: info

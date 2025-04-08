@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: wallet-app-backend-spring-boot
+
+  profiles:
+    default: dev
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 15
+
+  data:
+    jdbc:
+      dialect: mysql
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+      envers:
+        audit_table_suffix: _history
+
+  messages:
+    encoding: UTF-8
+
+# Actuator configuration for monitoring and management
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+  server:
+    port: 8081
+  tracing:
+    sampling:
+      probability: '1.0'
+
+# Logging configuration
+logging:
+  level:
+    root: info
+
+# Caffeine cache configuration
+cache:
+  short:
+    ttl: '60'
+  default:
+    max-size: '1000'
+  medium:
+    ttl: '120'
