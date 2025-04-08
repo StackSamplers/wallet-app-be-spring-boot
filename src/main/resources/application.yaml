@@ -54,3 +54,9 @@ cache:
     max-size: '1000'
   medium:
     ttl: '120'
+
+# Custom app constants
+constants:
+  api-url: url
+  api-key: key
+  default-auditor: SYSTEM
