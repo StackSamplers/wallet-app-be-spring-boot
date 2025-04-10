@@ -1,1 +1,0 @@
-package com.gucardev.walletappbackendspringboot.adapters.inbound.rest;
