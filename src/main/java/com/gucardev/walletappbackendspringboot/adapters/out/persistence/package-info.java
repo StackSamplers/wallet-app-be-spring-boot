@@ -1,0 +1,1 @@
+package com.gucardev.walletappbackendspringboot.adapters.out.persistence;
