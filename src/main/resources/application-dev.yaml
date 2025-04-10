@@ -1,15 +1,8 @@
 spring:
 
-  # Database configuration for development environment
-  datasource:
-    url: jdbc:mysql://localhost:3306/mydatabase?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Istanbul  # Database connection URL
-    username: root
-    password: pass
-
   # Additional dev-specific settings
   jpa:
     show-sql: true
-
 
 # Development-specific logging configuration
 logging:

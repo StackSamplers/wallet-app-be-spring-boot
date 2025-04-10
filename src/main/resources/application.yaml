@@ -10,6 +10,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     hikari:
       minimum-idle: 5
       maximum-pool-size: 15
@@ -64,8 +67,8 @@ constants:
   default-auditor: SYSTEM
 
 app:
-  jwt.secret-key: '8e8901fe01244c7d70f6c9225422664bfa4209fb0b0d30a1400fc3069171ed63b935d9ca98d4146d9ab5fffccb76300d23d412f9d07ec7051bbd1ed4dc8b893f'
+  jwt.secret-key: ${APP_JWT_SECRET_KEY}
   jwt.validity-in-minutes: 60
 
 encryption:
-  secret: 'm1ZZ7ywf9N1aAZJpAW4uUg=='
+  secret: ${APP_ENC_SECRET}
