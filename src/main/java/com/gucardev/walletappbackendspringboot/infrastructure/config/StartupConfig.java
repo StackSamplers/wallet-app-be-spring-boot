@@ -1,4 +1,4 @@
-package com.gucardev.walletappbackendspringboot.infrastructure;
+package com.gucardev.walletappbackendspringboot.infrastructure.config;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
