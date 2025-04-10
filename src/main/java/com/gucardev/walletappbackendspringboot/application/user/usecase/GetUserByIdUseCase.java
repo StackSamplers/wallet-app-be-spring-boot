@@ -1,7 +1,7 @@
 package com.gucardev.walletappbackendspringboot.application.user.usecase;
 
-import com.gucardev.walletappbackendspringboot.adapters.out.persistence.user.UserRepository;
 import com.gucardev.walletappbackendspringboot.domain.user.entity.User;
+import com.gucardev.walletappbackendspringboot.domain.user.port.UserRepositoryPort;
 import com.gucardev.walletappbackendspringboot.infrastructure.usecase.UseCaseWithParamsAndReturn;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,11 +15,11 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class GetUserByIdUseCase implements UseCaseWithParamsAndReturn<Long, Optional<User>> {
 
-    private final UserRepository userRepository;
+    private final UserRepositoryPort userRepositoryPort;
 
     @Override
     public Optional<User> execute(Long id) {
-        return userRepository.findById(id);
+        return userRepositoryPort.findById(id);
     }
 
 }
